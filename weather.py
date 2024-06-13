@@ -2,16 +2,16 @@ import os
 from dotenv import load_dotenv
 import requests
 from win11toast import toast
-from location import Location
 import easygui
-import time
+
 
 
 class Weather:
-    def __init__(self):
-        self.location = Location().city
+    def __init__(self, city, api_key):
+        self.location = city
         self.complete_weather = self.get_weather()
         self.temperature, self.condition, self.icon = self.parse_weather()
+        self.api_key = api_key
 
     load_dotenv()
 
@@ -49,9 +49,3 @@ class Weather:
         toast(f"Weather in {self.location}",
               f"Temperature: {self.temperature}C \n{self.condition}", icon=self.icon, on_click=self.show_dialog, button='Change location')
 
-
-weather = Weather()
-
-while True:
-    weather.show_notification()
-    time.sleep(1200)
