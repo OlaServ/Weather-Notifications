@@ -15,7 +15,7 @@ This Weather Notification App fetches the current weather information for a spec
 - `requests` library
 - `python-dotenv` library
 - `win11toast` library
-- `easygui` library
+- `tkinter` library
 
 ## Installation
 
@@ -23,7 +23,7 @@ This Weather Notification App fetches the current weather information for a spec
 
 2. **Install the required libraries**:
    ```bash
-   pip install requests python-dotenv win11toast easygui 
+   pip install requests python-dotenv win11toast 
 3. **Get an API key for the Weather API (https://www.weatherapi.com/)**:
 4. **Create a .env file containing the API key:**
    - API_KEY={your_api_key}
