@@ -12,4 +12,3 @@ class Location:
         city = requests.get("https://ipinfo.io/json").json()["city"]
 
         return city
-
